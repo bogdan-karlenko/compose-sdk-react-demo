@@ -23,7 +23,7 @@ const sisenseContextProviderArgs = () => {
   const ssoEnabled = import.meta.env.VITE_APP_SISENSE_SSO_ENABLED;
 
   if (ssoEnabled) {
-    return { ...baseOptions, ssoEnabled: ssoEnabled?.toLowercase() === 'true' };
+    return { ...baseOptions, ssoEnabled: ssoEnabled?.toLowerCase() === 'true' };
   } else if (wat) {
     return { ...baseOptions, wat }
   } else if (token) {
